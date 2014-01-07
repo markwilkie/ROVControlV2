@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94C0EC44-8BBF-411F-9C86-472CD1472FDD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ROVControl</RootNamespace>
+    <AssemblyName>ROVControl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ROVControl.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\AforgeLib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\AforgeLib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.VFW">
+      <HintPath>..\AforgeLib\AForge.Video.VFW.dll</HintPath>
+    </Reference>
+    <Reference Include="AlgLib">
+      <HintPath>..\AlgLib\bin\Debug\AlgLib.dll</HintPath>
+      <Aliases>global,alglib</Aliases>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Teroid.LevelsMeter">
+      <HintPath>..\TeroidLib\Teroid.LevelsMeter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADCMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BezierCalculator.cs" />
+    <Compile Include="Axis.cs" />
+    <Compile Include="HexDump.cs" />
+    <Compile Include="GraphControl.cs" />
+    <Compile Include="CompassControl.cs" />
+    <Compile Include="RawSensorMessage.cs" />
+    <Compile Include="VerticalProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThrusterControlMessage.cs" />
+    <Compile Include="VideoStream.cs" />
+    <Compile Include="ControlLoop.cs" />
+    <Compile Include="CraftController.cs" />
+    <Compile Include="DataPacket.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ComPortClass.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CircleControl\CircleControl.csproj">
+      <Project>{97222E2A-5504-429C-B557-EEA43CBAE32B}</Project>
+      <Name>CircleControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GraphLib\GraphLib.csproj">
+      <Project>{0C0A1F4D-1363-4544-A7C5-196C76D26CCA}</Project>
+      <Name>GraphLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JoystickInterface\JoystickInterface.csproj">
+      <Project>{0D77953E-FD60-4824-A997-AF72E66EF8C1}</Project>
+      <Name>JoystickInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyboardInterface\KeyboardInterface.csproj">
+      <Project>{C544180C-2186-4F98-B843-DA1212FE0027}</Project>
+      <Name>KeyboardInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_Right1.gif" />
+    <None Include="Resources\ROV_Ahead1.gif" />
+    <None Include="Resources\ROV_All_Stop1.gif" />
+    <None Include="Resources\ROV_Left1.gif" />
+    <None Include="Resources\ROV_Reverse1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_Center_Up.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_Center_Down.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_Center_Stop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_LF_Rev.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_RF_Rev.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_RR_For.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_RR_Stop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_LR_Stop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_LF_Stop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_RF_Stop.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_RR_Rev.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_LR_Rev.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_LF_For.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_RF_For.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ROV_LR_For.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_right_blue_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_up_blue_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_left_blue_round.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down_blue_round.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

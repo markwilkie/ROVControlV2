@@ -1,0 +1,92 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ROVControl.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SERIALBAUD" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">115200</Value>
+    </Setting>
+    <Setting Name="SMOOTHING_FACTOR" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="UP_DOWN_TRIM" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="LEFT_NEG_TRIM" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="LEFT_ZERO_TRIM" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="LEFT_POS_TRIM" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="VOLTAGE_SENSOR_MAP" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;0=0&lt;/string&gt;
+  &lt;string&gt;63=9.74&lt;/string&gt;
+  &lt;string&gt;95=12.74&lt;/string&gt;
+  &lt;string&gt;100=13.17&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="CURRENT_SENSOR_MAP" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;0=-53&lt;/string&gt;
+  &lt;string&gt;140=0&lt;/string&gt;
+  &lt;string&gt;256=47&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="LEAK_SENSOR_THRESHOLD" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="PAN_RIGHT_INCREMENT" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="PAN_LEFT_INCREMENT" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="JOYSTICK_THRESHOLD" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="POSITION_THRESHOLD" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="TILT_UP_INCREMENT" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="TILT_DOWN_INCREMENT" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">-2</Value>
+    </Setting>
+    <Setting Name="JOYSTICK_SENSITIVITY_CURVE" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RIGHT_NEG_TRIM" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="RIGHT_ZERO_TRIM" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="RIGHT_POS_TRIM" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="VIDEOPATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Users\Dad\Documents\ROVvideo</Value>
+    </Setting>
+    <Setting Name="CODEC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DIB </Value>
+    </Setting>
+    <Setting Name="MAX_ESC_RAMP_INTERVAL" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="MAX_ESC_RANGE" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
+    <Setting Name="SERIALTIMEOUT" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2000</Value>
+    </Setting>
+    <Setting Name="SERIALPORT" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">COM6</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
